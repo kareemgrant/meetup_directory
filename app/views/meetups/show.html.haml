@@ -1,0 +1,14 @@
+%h2= @meetup.name
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th First Name
+      %th Last Name
+      %th Superhero
+  %tbody
+    - @meetup.users.each do |user|
+      %tr
+        %td= user.first_name
+        %td= user.last_name
+        %td= user.superhero

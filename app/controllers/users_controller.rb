@@ -33,6 +33,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :superhero)
+    params.require(:user).permit(:first_name, :last_name, :superhero, {meetup_ids: []})
   end
 end
